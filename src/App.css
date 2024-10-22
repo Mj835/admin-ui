@@ -1,38 +1,94 @@
 .App {
-  text-align: center;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.search-icon {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid lightgrey;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.table-wrapper {
+  width: 100%;
+  margin: 20px 0px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.table-header > tr > td {
+  border-bottom: 1px solid lightgrey;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.table-body > tr > td {
+  padding: 10px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.role {
+  text-transform: capitalize;
+}
+
+.action {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  gap: 10px;
+}
+
+.action button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.pagination-wrapper {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  gap: 20px;
 }
 
-.App-link {
-  color: #61dafb;
-}
+.pagination-wrapper button {
+  border: 1px solid skyblue;
+  background-color: skyblue;
+  border-radius: 100%;
+  font-size: 16px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    border-color: lightgray;
+    background-color: lightgray;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.active {
+  background-color: transparent !important;
+  color: skyblue;
+}
+
+.bottom-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.multiple-delete {
+  background-color: rgb(255, 88, 88);
+  width: 125px;
+  height: 30px;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
   }
 }
